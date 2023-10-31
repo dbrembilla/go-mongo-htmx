@@ -1,0 +1,17 @@
+#build stage
+FROM golang:bullseye AS builder
+RUN apt-get update && apt-get install git
+WORKDIR /go/src/app
+COPY ./go-app/ .
+RUN go get -d -v ./...
+RUN go build -o /go/bin/app -v ./...
+
+#final stage
+FROM debian:bullseye
+RUN apt-get update && apt-get install -y git ca-certificates
+COPY --from=builder /go/bin/app /home/app
+COPY ./go-app/website /home
+WORKDIR /home/
+ENTRYPOINT ./app
+LABEL Name=go Version=0.0.1
+EXPOSE 3000

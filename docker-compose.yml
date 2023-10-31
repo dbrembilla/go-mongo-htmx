@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  go-app:
+    image: go
+    build:
+      context: .
+      dockerfile: ./go-dockerfile
+    ports:
+      - 3000:3000
+    networks:
+      - go_mongo_htmx
+  mongo:
+    image: mongo
+    build: 
+      context: .
+      dockerfile: ./mongodb-dockerfile
+    ports:
+      - 27017:27017
+    networks:
+      - go_mongo_htmx
+
+networks:
+  go_mongo_htmx:
+    driver: bridge

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Person</title>
+  <script src="https://unpkg.com/htmx.org@1.9.6" integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="static/css/index.css">
+</head>
+<body>
+<main>
+  <section class="title">
+    <h1>Get a random person!</h1>
+  </section>
+  <section>
+    <div>
+      <button name="get-random-person" class="button"
+             hx-post="/random-person"
+             hx-target="#random-person">
+             Get a random person!
+            </button>
+    </div>
+    </section>
+  <section>
+    <div id="random-person">
+    </div>
+  </section>
+  <footer>
+    Made by <a href="https://github.com/dbrembilla">Davide Brembilla</a>.
+  </footer>
+</main>
+</body>
+</html>

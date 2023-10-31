@@ -1,0 +1,7 @@
+FROM mongo
+
+COPY ./mongodb/ages.csv /data/db/
+COPY ./mongodb/launch_mongo.sh /bin/launch_mongo
+RUN chmod +x /bin/launch_mongo
+EXPOSE 27017
+CMD ["mongod"]

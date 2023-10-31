@@ -1,0 +1,88 @@
+/* Reset some default browser styles for consistency */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the background color to relaxing grey and center everything */
+body {
+    background-color: #f0f0f0; /* Relaxing grey color */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+/* Style the heading with a calming color and some margin */
+h1 {
+    color: #4d4d4d; /* Dark grey color */
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/* Style the paragraph with a slightly darker color */
+p {
+    color: #666666; /* Medium grey color */
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Style links with a calming color and remove underlines */
+a {
+    color: #7e7e7e; /* Dark grey color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style buttons with a soothing background color and a bit of padding */
+button {
+    background-color: #4d4d4d; /* Dark grey color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    left: 50%;;
+}
+
+button:hover {
+    background-color: #666666; /* Medium grey color */
+}
+
+/* Add some margin at the bottom of the page for visual balance */
+footer {
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: #333333; /* Dark grey color */
+    color: white;
+    text-align: center;
+}
+
+/* Remove the dot before li elements in unordered lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style the list items */
+ul li {
+    margin-bottom: 10px; /* Add some spacing between list items */
+    background-color: #ffffff; /* White background color for list items */
+    border-radius: 5px; /* Rounded corners for list items */
+    padding: 10px 20px; /* Padding inside list items */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
+    transition: transform 0.3s ease; /* Add a smooth transition effect on hover */
+}
+
+/* Change the background color and add a slight lift effect on hover */
+ul li:hover {
+    background-color: #f0f0f0; /* Light grey background color on hover */
+    transform: translateY(-5px); /* Lift the item slightly on hover */
+}
